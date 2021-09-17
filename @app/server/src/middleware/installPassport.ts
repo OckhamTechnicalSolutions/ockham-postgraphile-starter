@@ -72,6 +72,7 @@ export default async (app: Express) => {
         clientID: process.env.GOOGLE_KEY,
         clientSecret: process.env.GOOGLE_SECRET,
         scope: ["user:email"],
+        callbackURL: "http://localhost:5678/auth/google/callback",
       },
       {},
       async (profile, _accessToken, _refreshToken, _extra, _req) => ({
