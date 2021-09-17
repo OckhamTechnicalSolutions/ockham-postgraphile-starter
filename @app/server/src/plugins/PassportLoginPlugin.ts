@@ -147,7 +147,7 @@ const PassportLoginPlugin = makeExtendSchemaPlugin((build) => ({
             data: row,
           };
         } catch (e) {
-          const { code } = e;
+          const { code }: any = e;
           const safeErrorCodes = [
             "WEAKP",
             "LOCKD",
@@ -210,8 +210,8 @@ const PassportLoginPlugin = makeExtendSchemaPlugin((build) => ({
           return {
             data: row,
           };
-        } catch (e) {
-          const { code } = e;
+        } catch (e: any) {
+          const { code }: any = e;
           const safeErrorCodes = ["LOCKD", "CREDS"];
           if (safeErrorCodes.includes(code)) {
             throw e;
