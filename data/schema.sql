@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.2 (Ubuntu 13.2-1.pgdg18.04+1)
--- Dumped by pg_dump version 13.2 (Ubuntu 13.2-1.pgdg18.04+1)
+-- Dumped from database version 13.3
+-- Dumped by pg_dump version 13.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -2479,7 +2479,7 @@ GRANT USAGE ON SCHEMA app_public TO graphile_starter_visitor;
 -- Name: SCHEMA public; Type: ACL; Schema: -; Owner: -
 --
 
-REVOKE ALL ON SCHEMA public FROM postgres;
+REVOKE ALL ON SCHEMA public FROM "todd-dev";
 REVOKE ALL ON SCHEMA public FROM PUBLIC;
 GRANT ALL ON SCHEMA public TO graphile_starter;
 GRANT USAGE ON SCHEMA public TO graphile_starter_visitor;
