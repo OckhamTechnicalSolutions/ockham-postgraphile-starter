@@ -1,4 +1,4 @@
-import { GithubOutlined } from "@ant-design/icons";
+import { GithubOutlined, GoogleOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import React from "react";
 
@@ -16,14 +16,26 @@ export function SocialLoginOptions({
   buttonTextFromService = defaultButtonTextFromService,
 }: SocialLoginOptionsProps) {
   return (
-    <Button
-      block
-      size="large"
-      icon={<GithubOutlined />}
-      href={`/auth/github?next=${encodeURIComponent(next)}`}
-      type="primary"
-    >
-      {buttonTextFromService("GitHub")}
-    </Button>
+    <>
+      <Button
+        block
+        size="large"
+        icon={<GithubOutlined />}
+        href={`/auth/github?next=${encodeURIComponent(next)}`}
+        type="primary"
+      >
+        {buttonTextFromService("GitHub")}
+      </Button>
+      <p></p>
+      <Button
+        block
+        size="large"
+        icon={<GoogleOutlined />}
+        href={`/auth/google?next=${encodeURIComponent(next)}`}
+        type="primary"
+      >
+        {buttonTextFromService("Google")}
+      </Button>
+    </>
   );
 }
