@@ -71,7 +71,7 @@ export default async (app: Express) => {
       {
         clientID: process.env.GOOGLE_KEY,
         clientSecret: process.env.GOOGLE_SECRET,
-        scope: ["profile"],
+        scope: ["profile", "email"],
       },
       {},
       async (profile, _accessToken, _refreshToken, _extra, _req) => ({
